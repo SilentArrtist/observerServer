@@ -1,0 +1,53 @@
+//Create table
+// sql = `CREATE TABLE devices(id INTEGER PRIMARY KEY,ip,holdingRegisters,inputRegisters,coils)`
+// db.run(sql)
+// sql = `CREATE TABLE users(id INTEGER PRIMARY KEY,login,password,role)`
+// db.run(sql)
+
+//Drop table
+// db.run('DROP TABLE devices')
+// db.run('DROP TABLE users')
+
+//Insert value
+// sql = `INSERT INTO devices(ip,holdingRegisters,inputRegisters,coils) VALUES (?,?,?,?)`;
+// db.run(sql,[ip,[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]],(err)=>{ if(err) return console.error(err.message)})
+// sql = `INSERT INTO users(login,password,role) VALUES (?,?,?)`;
+// db.run(sql,["login","hashPassword","USER"],(err)=>{if(err) return console.error(err.message)})
+
+//Update value
+// sql = `UPDATE holding_registers SET value = ? where modbus_index = ?`
+// db.run(sql,[5,0],(err)=>{
+//     if(err) return console.error(err.message)
+// })
+// sql = `UPDATE input_registers SET value = ? where modbus_index = ?`
+// db.run(sql,[14,0],(err)=>{
+//     if(err) return console.error(err.message)
+// })
+// sql = `UPDATE coils SET value = ? where modbus_index = ?`
+// db.run(sql,[10,0],(err)=>{
+//     if(err) return console.error(err.message)
+// })
+
+
+//Querry value
+// sql = `SELECT * FROM devices`
+// db.all(sql,[],(err,rows)=>{
+//     if(err) return console.error(err.message)
+//     console.log(rows);
+// })
+// sql = `SELECT * FROM users`
+// db.all(sql,[],(err,rows)=>{
+//     if(err) return console.error(err.message)
+//     console.log(rows);
+// })
+
+
+
+
+// RESET SAVE
+
+// let save = '{"elements":[],"images":[],"imagesNames":["cad34744-775b-4f6e-81f0-d4edd5c0a8fd.png","84d11e4c-0062-4e15-86de-da3cfee7cf8d.png","2d44940a-579d-4dcb-9fed-aec63d290f7a.png","ed398fc2-a5cb-49a4-bc05-e70273d02d7d.png"],"settings":{"mainBackground":"#e6e6e6","topBackground":"#000000","colorAccent":"rgb(131,23,134)","textColor":"rgb(69, 89, 141)"}}'
+// sql = `UPDATE save SET elements = ? where id = 1`
+// db.run(sql,[save],(err)=>{
+//     if(err) return console.error(err.message)
+// })
